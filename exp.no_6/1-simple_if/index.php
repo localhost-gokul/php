@@ -7,32 +7,31 @@
 </head>
 <body>
     <h1>Calculate Area of Rectangle</h1>
-    <form action="index.php" method="post">
+
+    <?php
+    // Check if the form is submitted
+    if (isset($_POST['submit'])) {
+        // Get length and width values
+        $length = floatval($_POST['length']);
+        $width = floatval($_POST['width']);
+
+        // Calculate the area of the rectangle
+        $area = $length * $width;
+
+        // Display the result
+        echo "<h2>The area of the rectangle is: $area</h2>";
+    }
+    ?>
+
+    <!-- The HTML form -->
+    <form action="" method="post">
         <label for="length">Enter Length:</label>
-        <input type="number" id="length" name="length" step="0.01" required>
+        <input type="number" id="length" name="length" required>
         <br><br>
         <label for="width">Enter Width:</label>
-        <input type="number" id="width" name="width" step="0.01" required>
+        <input type="number" id="width" name="width" required>
         <br><br>
-        <input type="submit" value="Calculate Area">
+        <input type="submit" name="submit" value="Calculate">
     </form>
 </body>
 </html>
-
-<?php
-// Check if the form has been submitted
-if (isset($_POST['length']) && isset($_POST['width'])) {
-    // Retrieve length and width from the form
-    $length = floatval($_POST['length']);
-    $width = floatval($_POST['width']);
-
-    // Calculate the area of the rectangle
-    $area = $length * $width;
-
-    // Display the result
-    echo "<h1>The area of the rectangle is: $area</h1>";
-} else {
-    // The form has not been submitted yet
-    echo "<h1>Please enter the length and width of the rectangle.</h1>";
-}
-?>
