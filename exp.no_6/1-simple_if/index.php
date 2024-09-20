@@ -8,6 +8,17 @@
 <body>
     <h1>Calculate Area of Rectangle</h1>
 
+    <!-- The HTML form -->
+    <form action="" method="post">
+        <label for="length">Enter Length:</label>
+        <input type="number" id="length" name="length" required>
+        <br><br>
+        <label for="width">Enter Width:</label>
+        <input type="number" id="width" name="width" required>
+        <br><br>
+        <input type="submit" name="submit" value="Calculate">
+    </form>
+
     <?php
     // Check if the form is submitted
     if (isset($_POST['submit'])) {
@@ -22,16 +33,6 @@
         echo "<h2>The area of the rectangle is: $area</h2>";
     }
     ?>
-
-    <!-- The HTML form -->
-    <form action="" method="post">
-        <label for="length">Enter Length:</label>
-        <input type="number" id="length" name="length" required>
-        <br><br>
-        <label for="width">Enter Width:</label>
-        <input type="number" id="width" name="width" required>
-        <br><br>
-        <input type="submit" name="submit" value="Calculate">
-    </form>
+    
 </body>
 </html>
