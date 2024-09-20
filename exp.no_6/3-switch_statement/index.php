@@ -28,3 +28,37 @@
     </form>
 </body>
 </html>
+
+<?php
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $num1 = $_POST["num1"];
+    $num2 = $_POST["num2"];
+    $operation = $_POST["operation"];
+
+    switch ($operation) {
+        case 'Add':
+            $result = $num1 + $num2;
+            echo "<h2>Result = $num1 + $num2 = $result</h2>";
+            break;
+        
+        case 'Subtract':
+            $result = $num1 - $num2;
+            echo "<h2>Result = $num1 - $num2 = $result</h2>";
+            break;
+        
+        case 'Multiply':
+            $result = $num1 * $num2;
+            echo "<h2>Result = $num1 * $num2 = $result</h2>";
+            break;
+
+        case 'Divide':
+            $result = $num1 / $num2;
+            echo "<h2>Result = $num1 / $num2 = $result</h2>";
+            break;
+        
+        default:
+            echo "<h2>Please select a valid operation.</h2>";
+            break;
+    }
+}
+?>
