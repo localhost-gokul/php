@@ -16,3 +16,18 @@
 
 </body>
 </html>
+
+<?php
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $number = intval($_POST["number"]);
+    $i = 1;
+
+    echo "<h2>Multiplication Table for $number</h2>";
+
+    while($i <= 10){
+        $result = $number * $i;
+        echo "<p>$i x $number = $result</p>";
+        $i++;
+    }
+}
+?>
