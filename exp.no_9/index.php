@@ -60,7 +60,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
 
     } else {
-        echo "$opetation is not found.";
+        echo "$operation is not found.";
     }
 }
 ?>
