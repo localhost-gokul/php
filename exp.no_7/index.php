@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>php function</title>
 </head>
-<head>
+<body>
     <h1>Addition of Two numbers:</h1>
     <form action="" method="post">
         <label for="num1">Enter first number  :</label>
@@ -17,7 +17,7 @@
 
         <input type="submit" value="Add">
     </form>
-</head>
+</body>
 </html>
 
 <?php
